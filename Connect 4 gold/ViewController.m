@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "GridView.h"
 #import "ConnectFourGoldGame.h"
-@interface ViewController () <UICollectionViewDelegate,UICollectionViewDataSource>
+@interface ViewController () <UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @property (weak, nonatomic) IBOutlet UIImageView *gameOverImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -29,6 +29,12 @@ static int i = 0;
     }
     return _game;
 }
+-(CGSize) collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGFloat width = self.collectionView.bounds.size.width;
+    return  CGSizeMake ( (width/NUM ) - 6 , (width/NUM)  -6 );
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
