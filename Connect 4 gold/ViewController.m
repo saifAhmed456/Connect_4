@@ -57,10 +57,10 @@ static int i = 0;
         [self.game updateGameArray:indexPath.row player:i%2];
         UICollectionViewCell * cell = [collectionView cellForItemAtIndexPath:indexPath];
         UIImageView * cellView = [[UIImageView alloc] initWithFrame:cell.contentView.frame];
-        cellView.image =  [self getColorForPlayer:i%2];
+        //cellView.image =  [self getImageForPlayer:i%2];
         cellView.contentMode = UIViewContentModeScaleAspectFill;
         [cell.contentView addSubview:cellView];
-       // cell.contentView.backgroundColor = [self getColorForPlayer : i%2];
+        cell.contentView.backgroundColor = [self getColorForPlayer : i%2];
     
         i++;
         if([self.game isGameOver])
@@ -79,6 +79,7 @@ static int i = 0;
     {
         NSIndexPath * indexPath = [NSIndexPath indexPathForRow:i inSection:0];
         UICollectionViewCell * cell = [self.collectionView cellForItemAtIndexPath:indexPath];
+        cell.contentView.backgroundColor = [self getColorForPlayer:2];
         UIView * view  = [[cell.contentView subviews] firstObject] ;
         if ([view isKindOfClass:[UIImageView class] ])
         {
@@ -97,6 +98,7 @@ static int i = 0;
     {
         NSIndexPath * indexPath = [NSIndexPath indexPathForRow:i inSection:0];
         UICollectionViewCell * cell = [self.collectionView cellForItemAtIndexPath:indexPath];
+         cell.contentView.backgroundColor = [self getColorForPlayer : 10];
         UIView * view  = [[cell.contentView subviews] firstObject] ;
          if ([view isKindOfClass:[UIImageView class] ])
          {
@@ -107,7 +109,7 @@ static int i = 0;
         
     }
 }
--(UIImage *) getColorForPlayer : (int) player
+-(UIImage *) getImageForPlayer : (int) player
 {
     switch (player)
     {
@@ -115,6 +117,16 @@ static int i = 0;
         case 1 :  return [UIImage imageNamed:@"JerryImage"];
         default :  return  [UIImage imageNamed:@""];
      }
+}
+-(UIColor*)getColorForPlayer : (int)player
+{
+    switch (player)
+    {
+        case 0 :  return  [[UIColor yellowColor] colorWithAlphaComponent:0.7];
+        case 1 :  return  [[UIColor redColor] colorWithAlphaComponent:0.6];
+        case 2 : return [UIColor whiteColor];
+        default :  return  [UIColor colorWithWhite:0.4 alpha:0.4];
+    }
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
