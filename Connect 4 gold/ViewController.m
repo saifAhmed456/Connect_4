@@ -59,6 +59,7 @@ static int i = 0;
         UIImageView * cellView = [[UIImageView alloc] initWithFrame:cell.contentView.frame];
         //cellView.image =  [self getImageForPlayer:i%2];
         cellView.contentMode = UIViewContentModeScaleAspectFill;
+        
         [cell.contentView addSubview:cellView];
         cell.contentView.backgroundColor = [self getColorForPlayer : i%2];
     
@@ -136,8 +137,10 @@ static int i = 0;
 {
     UICollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Game cell" forIndexPath:indexPath];
     cell.contentView.layer.borderColor = [UIColor blackColor].CGColor;
-    
-    //cell.contentView.layer.cornerRadius = cell.contentView.frame.size.width/2;
+    [cell.contentView setFrame:cell.frame];
+    NSLog(@"h = %f w = %f",cell.bounds.size.height, cell.bounds.size.width);
+    NSLog(@"content view h =%f w = %f", cell.contentView.bounds.size.height, cell.contentView.bounds.size.width);
+    cell.contentView.layer.cornerRadius = cell.contentView.bounds.size.width/2;
     cell.contentView.layer.borderWidth = 1.5f;
     return cell;
 }
