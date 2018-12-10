@@ -124,7 +124,7 @@ NSInteger game[ROWS][COLUMNS];
 {     if(player2Count == 0 || player1Count == 0)
 {          self.winner = (player2Count == 0) ? 2 : 1;
     int row = i+1; int col = j;
-    for (int k =0;k<4;k++,row++)
+    for (int k =0;k<WINCOUNT;k++,row++)
         game[row][col] = WINNER;
     return YES;
 }
@@ -148,7 +148,7 @@ NSInteger game[ROWS][COLUMNS];
     if(player2Count == 0 || player1Count == 0)
     {    self.winner = (player2Count == 0) ? 2 : 1;
         int row = i; int col = j-1;
-        for (int k =0;k<4;k++,col--)
+        for (int k =0;k<WINCOUNT;k++,col--)
             game[row][col] = WINNER;
         return YES;
     }
