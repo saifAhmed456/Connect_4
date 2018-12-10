@@ -7,9 +7,9 @@
 //
 
 #import "ConnectFourGoldGame.h"
-#define ROWS 5
-#define COLUMNS 5
-#define WINCOUNT 4
+ const int ROWS =7;
+const int COLUMNS = 7;
+const int WINCOUNT = 4;
 #define WINNER  10
 const int  DEFAULT = -1;
 const int PLAYER1 = 0;

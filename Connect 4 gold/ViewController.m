@@ -51,7 +51,7 @@ static int i = 0;
    
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
+{   NSLog(@"height = %f",self.collectionView.bounds.size.height);
     if([self.game isValidMove:indexPath.row] )
     {
         [self.game updateGameArray:indexPath.row player:i%2];

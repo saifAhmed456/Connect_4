@@ -24,18 +24,53 @@
                                     <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dp5-DU-zDD">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                     </imageView>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4JB-vM-SUO">
-                                        <rect key="frame" x="31" y="154" width="312" height="338"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZND-qP-yfc">
+                                        <rect key="frame" x="20" y="58" width="335" height="74"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MF8-TZ-jnV">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="74" id="UJi-lv-YCn"/>
+                                        </constraints>
+                                        <string key="text">To win Connect Four you must be the first player to get four of your colored checkers in a row either horizontally, vertically or diagonally.
+</string>
+                                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How To win:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngl-Ga-Ajk">
+                                        <rect key="frame" x="20" y="20" width="105" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="105" id="9xd-6Q-8wi"/>
+                                            <constraint firstAttribute="height" constant="22" id="yaG-70-US1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1b-qF-63b">
+                                        <rect key="frame" x="316" y="20" width="39" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Tdb-pf-zBu"/>
+                                            <constraint firstAttribute="width" constant="39" id="h50-uV-3se"/>
+                                        </constraints>
+                                        <state key="normal" title="Reset"/>
+                                        <connections>
+                                            <action selector="RestartGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j4g-SV-6nR"/>
+                                        </connections>
+                                    </button>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4JB-vM-SUO">
+                                        <rect key="frame" x="23" y="135" width="329" height="377"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="329" id="siT-ZL-dBz"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="7" minimumInteritemSpacing="6" id="MF8-TZ-jnV">
                                             <size key="itemSize" width="50" height="50"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
-                                        <imageView key="backgroundView" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="0FQ-cP-NFc">
-                                            <rect key="frame" x="0.0" y="0.0" width="312" height="338"/>
+                                        <imageView key="backgroundView" userInteractionEnabled="NO" alpha="0.01" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="fgj-Bt-3Ap">
+                                            <rect key="frame" x="0.0" y="0.0" width="329" height="377"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <cells>
@@ -49,60 +84,45 @@
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZND-qP-yfc">
-                                        <rect key="frame" x="14" y="56" width="353" height="90"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <string key="text">To win Connect Four you must be the first player to get four of your colored checkers in a row either horizontally, vertically or diagonally.
-</string>
-                                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How To win:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngl-Ga-Ajk">
-                                        <rect key="frame" x="14" y="26" width="105" height="22"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1b-qF-63b">
-                                        <rect key="frame" x="293" y="18" width="39" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Reset"/>
-                                        <connections>
-                                            <action selector="RestartGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j4g-SV-6nR"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="dp5-DU-zDD" secondAttribute="trailing" id="U4G-40-nOS"/>
-                                    <constraint firstAttribute="bottom" secondItem="dp5-DU-zDD" secondAttribute="bottom" id="YgH-dn-zgb"/>
-                                    <constraint firstItem="dp5-DU-zDD" firstAttribute="leading" secondItem="huq-Tt-Wwh" secondAttribute="leading" id="eeV-TB-xLC"/>
-                                    <constraint firstItem="dp5-DU-zDD" firstAttribute="top" secondItem="huq-Tt-Wwh" secondAttribute="top" id="oj0-f5-bfk"/>
+                                    <constraint firstAttribute="trailing" secondItem="m1b-qF-63b" secondAttribute="trailing" constant="20" symbolic="YES" id="54C-nx-rFd"/>
+                                    <constraint firstItem="4JB-vM-SUO" firstAttribute="centerX" secondItem="huq-Tt-Wwh" secondAttribute="centerX" id="5LZ-kP-YNS"/>
+                                    <constraint firstItem="m1b-qF-63b" firstAttribute="top" secondItem="huq-Tt-Wwh" secondAttribute="top" constant="20" symbolic="YES" id="7vn-fS-V80"/>
+                                    <constraint firstAttribute="bottom" secondItem="dp5-DU-zDD" secondAttribute="bottom" id="8mr-aH-xtZ"/>
+                                    <constraint firstItem="dp5-DU-zDD" firstAttribute="leading" secondItem="huq-Tt-Wwh" secondAttribute="leading" id="Cyf-go-3nx"/>
+                                    <constraint firstItem="ngl-Ga-Ajk" firstAttribute="leading" secondItem="huq-Tt-Wwh" secondAttribute="leading" constant="20" symbolic="YES" id="FTA-9X-wr7"/>
+                                    <constraint firstItem="ZND-qP-yfc" firstAttribute="leading" secondItem="huq-Tt-Wwh" secondAttribute="leading" constant="20" symbolic="YES" id="G5S-40-WW7"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZND-qP-yfc" secondAttribute="trailing" constant="20" symbolic="YES" id="NWq-28-6W6"/>
+                                    <constraint firstItem="4JB-vM-SUO" firstAttribute="top" secondItem="ZND-qP-yfc" secondAttribute="bottom" constant="3" id="Oih-k9-aSa"/>
+                                    <constraint firstItem="ZND-qP-yfc" firstAttribute="top" secondItem="m1b-qF-63b" secondAttribute="bottom" constant="8" symbolic="YES" id="UdL-xV-Yud"/>
+                                    <constraint firstAttribute="trailing" secondItem="dp5-DU-zDD" secondAttribute="trailing" id="XQc-xS-S3Y"/>
+                                    <constraint firstItem="ngl-Ga-Ajk" firstAttribute="top" secondItem="huq-Tt-Wwh" secondAttribute="top" constant="20" symbolic="YES" id="dZV-ty-ao2"/>
+                                    <constraint firstItem="dp5-DU-zDD" firstAttribute="top" secondItem="huq-Tt-Wwh" secondAttribute="top" id="qaq-o7-NeI"/>
+                                    <constraint firstItem="4JB-vM-SUO" firstAttribute="centerY" secondItem="huq-Tt-Wwh" secondAttribute="centerY" id="wjE-zi-OCx"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="huq-Tt-Wwh" secondAttribute="trailing" id="8nP-ET-Hcb"/>
-                            <constraint firstItem="huq-Tt-Wwh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Cvu-Mt-uS5"/>
-                            <constraint firstItem="huq-Tt-Wwh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" symbolic="YES" id="KA1-nr-TiO"/>
-                            <constraint firstItem="huq-Tt-Wwh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="lQX-TB-SpM"/>
+                            <constraint firstItem="huq-Tt-Wwh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4sp-8w-4qb"/>
+                            <constraint firstItem="huq-Tt-Wwh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="TsB-hr-HUu"/>
+                            <constraint firstItem="huq-Tt-Wwh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="VYF-4n-hGf"/>
+                            <constraint firstItem="huq-Tt-Wwh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hgB-Ub-zGb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="ResetButton" destination="m1b-qF-63b" id="eZk-Ef-Y0g"/>
                         <outlet property="collectionView" destination="4JB-vM-SUO" id="Oyn-jG-Cg1"/>
-                        <outlet property="gameOverImageView" destination="0FQ-cP-NFc" id="LU6-UP-1xg"/>
+                        <outlet property="gameOverImageView" destination="fgj-Bt-3Ap" id="qIr-zB-oUL"/>
                         <outlet property="imageView" destination="dp5-DU-zDD" id="GfU-zD-2ZZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1809" y="-645"/>
+            <point key="canvasLocation" x="-2289" y="-845"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="jXZ-X5-2GK">
