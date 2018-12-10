@@ -33,8 +33,7 @@ NSInteger game[ROWS][COLUMNS];
     {     int result =  [self UpperDiagonal :i:j:WINCOUNT:WINCOUNT];
        //NSLog(@" %d,%d UD result = %d",i,j,result);
         if(result)
-        {      for (int k=0;k<4;k++,i--,j++)
-            game[i][j] = WINNER;
+        {
             return result;
         }
           i==ROWS-1 ? j++ : j;
@@ -45,8 +44,7 @@ NSInteger game[ROWS][COLUMNS];
     {       int result = [self lowerDiagonal :i:j:WINCOUNT:WINCOUNT];
         //NSLog(@" %d,%d LD result = %d",i,j,result);
         if(result)
-        {  for (int k=0;k<4;k++,i++,j++)
-            game[i][j] = WINNER;
+        {
             return result;
         }
          j==0 ? i++ : i;
@@ -58,6 +56,8 @@ NSInteger game[ROWS][COLUMNS];
 -(BOOL) lowerDiagonal : (int) i : (int) j : (int) player1Count : (int)player2Count
 {    if(player2Count == 0 || player1Count == 0)
 {          self.winner = (player2Count == 0) ? 2 : 1;
+    for (int k=0;k<WINCOUNT;k++,i--,j--)
+        game[i][j] = WINNER;
     return YES;
 }
     if(i == ROWS || j== COLUMNS)
@@ -81,7 +81,10 @@ NSInteger game[ROWS][COLUMNS];
 }
 -(BOOL) UpperDiagonal : (int) i : (int) j : (int) player1Count : (int)player2Count
 {   if(player2Count == 0 || player1Count == 0)
+     
 {          self.winner = (player2Count == 0) ? 2 : 1;
+    for (int k=0;k<WINCOUNT;k++,i++,j--)
+        game[i][j] = WINNER;
     return YES;
 }
     if(i == -1 || j== COLUMNS)
