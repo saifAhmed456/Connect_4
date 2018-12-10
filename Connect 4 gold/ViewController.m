@@ -21,6 +21,7 @@
 
 @implementation ViewController
 static int i = 0;
+#define NUM 7
 -(ConnectFourGoldGame *)game
 {
     if(!_game)
@@ -73,7 +74,7 @@ static int i = 0;
     i = 0;
     self.ResetButton.hidden = YES;
     self.gameOverImageView.hidden =YES;
-    for ( NSInteger i=0;i<25;i++)
+    for ( NSInteger i=0;i<NUM * NUM;i++)
     {
     {
         NSIndexPath * indexPath = [NSIndexPath indexPathForRow:i inSection:0];
@@ -91,8 +92,8 @@ static int i = 0;
 -(void) gameOverUI
 {   self.ResetButton.hidden = NO;
     self.gameOverImageView.hidden =NO;
-    for ( NSInteger i=0;i<25;i++)
-    {   if ([self.game getValueForRow:i/5 :i%5] != 10)
+    for ( NSInteger i=0;i<NUM * NUM;i++)
+    {   if ([self.game getValueForRow:i/NUM :i%NUM] != 10)
     {
         NSIndexPath * indexPath = [NSIndexPath indexPathForRow:i inSection:0];
         UICollectionViewCell * cell = [self.collectionView cellForItemAtIndexPath:indexPath];
@@ -117,7 +118,7 @@ static int i = 0;
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 25;
+    return NUM * NUM;
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
