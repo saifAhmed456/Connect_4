@@ -93,6 +93,10 @@ static int i = 0;
             
         }
     }
+    
+    if (! [self.game areMovesLeft]){
+        self.ResetButton.hidden = NO;
+    }
 }
 - (IBAction)RestartGame:(id)sender {
     self.game = nil;

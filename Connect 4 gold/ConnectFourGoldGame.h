@@ -16,5 +16,6 @@
 -(NSInteger) getValueForRow : (NSInteger)row : (NSInteger)col;
 -(NSInteger) findBestMove;
 -(void)displayGameArray;
+-(BOOL) areMovesLeft;
 
 @end

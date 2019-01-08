@@ -19,8 +19,22 @@ NSInteger game[ROWS][COLUMNS];
 @property (nonatomic) BOOL isEvaluateBoard;
 @end
 @implementation ConnectFourGoldGame
-
-
+/////////////////////////////////DISPLAY GAME ARRAY//////////////////////////////////////////////////////////////////////////
+-(void)displayGameArray{
+    for (int i=0;i<ROWS;i++)
+    {
+        for (int j=0;j<COLUMNS;j++)
+        {   NSLog(@"%ld ",game[i][j]);
+        }
+        NSLog(@".........");
+    }
+    NSLog(@"end of matrix............");
+}  
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+struct Move {
+    int row;
+    int col;
+};
 -(NSInteger) getValueForRow : (NSInteger)row : (NSInteger)col
 {
     return game[row][col];
