@@ -21,7 +21,7 @@
 
 @implementation ViewController
 static int i = 0;
-#define NUM 7
+#define NUM 5
 -(ConnectFourGoldGame *)game
 {
     if(!_game)
@@ -33,7 +33,8 @@ static int i = 0;
 -(CGSize) collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     CGFloat width = self.collectionView.bounds.size.width;
-    return  CGSizeMake ( (width/NUM ) - 6 , (width/NUM)  -6 );
+    //CGFloat height = self.collectionView.bounds.size.height;
+    return   ( CGSizeMake ( (width/NUM ) - 6 , (width/NUM)  -6 ) )  ;
 }
 
 - (void)viewDidLoad {
@@ -51,22 +52,45 @@ static int i = 0;
    
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{   NSLog(@"height = %f",self.collectionView.bounds.size.height);
-    if([self.game isValidMove:indexPath.row] )
-    {
-        [self.game updateGameArray:indexPath.row player:i%2];
+{   //NSLog(@"height = %f",self.collectionView.bounds.size.height);
+    if([self.game isValidMove:indexPath.row]  && [self.game isGameOver] == false)
+    {          NSLog(@"inside did select");
+        [self.game updateGameArray:indexPath.row player:1];
         UICollectionViewCell * cell = [collectionView cellForItemAtIndexPath:indexPath];
         UIImageView * cellView = [[UIImageView alloc] initWithFrame:cell.contentView.frame];
         //cellView.image =  [self getImageForPlayer:i%2];
         cellView.contentMode = UIViewContentModeScaleAspectFill;
         
         [cell.contentView addSubview:cellView];
-        cell.contentView.backgroundColor = [self getColorForPlayer : i%2];
-    
-        i++;
+        cell.contentView.backgroundColor = [self getColorForPlayer : 0];
+       // [self.game displayGameArray];
+        
         if([self.game isGameOver])
         { NSLog(@"game over");
             [self gameOverUI];
+        }
+        
+        else
+        {
+            dispatch_queue_t BackGroundQ = dispatch_queue_create("otherQ", 0);
+            dispatch_async(BackGroundQ, ^{
+                NSInteger comMove = [self.game findBestMove];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.game updateGameArray:comMove player:0];
+                    NSIndexPath * indexPathCom =  [NSIndexPath indexPathForRow:comMove inSection:0] ;
+                    UICollectionViewCell * cell = [collectionView cellForItemAtIndexPath:indexPathCom];
+                    cell.contentView.backgroundColor = [self getColorForPlayer : 1];
+                    if([self.game isGameOver])
+                    { NSLog(@"game over");
+                        [self gameOverUI];
+                    }
+                });
+            });
+            
+            
+           
+            
+            
         }
     }
 }
@@ -138,8 +162,8 @@ static int i = 0;
     UICollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Game cell" forIndexPath:indexPath];
     cell.contentView.layer.borderColor = [UIColor blackColor].CGColor;
     [cell.contentView setFrame:cell.frame];
-    NSLog(@"h = %f w = %f",cell.bounds.size.height, cell.bounds.size.width);
-    NSLog(@"content view h =%f w = %f", cell.contentView.bounds.size.height, cell.contentView.bounds.size.width);
+   // NSLog(@"h = %f w = %f",cell.bounds.size.height, cell.bounds.size.width);
+    //NSLog(@"content view h =%f w = %f", cell.contentView.bounds.size.height, cell.contentView.bounds.size.width);
     cell.contentView.layer.cornerRadius = cell.contentView.bounds.size.width/2;
     cell.contentView.layer.borderWidth = 1.5f;
     return cell;
