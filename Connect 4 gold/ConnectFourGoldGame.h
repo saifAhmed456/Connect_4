@@ -14,4 +14,7 @@
 @property (nonatomic) NSInteger winner;
 -(BOOL) isGameOver;
 -(NSInteger) getValueForRow : (NSInteger)row : (NSInteger)col;
+-(NSInteger) findBestMove;
+-(void)displayGameArray;
+
 @end
