@@ -7,8 +7,8 @@
 //
 
 #import "ConnectFourGoldGame.h"
- const int ROWS =5;
-const int COLUMNS = 5;
+ const int ROWS =6;
+const int COLUMNS = 7;
 const int WINCOUNT = 4;
 #define WINNER  10
 const int  DEFAULT = -1;
@@ -78,7 +78,7 @@ struct Move {
     }
     if ([self areMovesLeft] == false)
         return 0;
-    if (depth == 7)
+    if (depth == 6)
         return score;
     if (isMax) {
          best = -1000;
@@ -139,14 +139,22 @@ struct Move {
 
 -(NSInteger) evaluateBoard
 {   self.isEvaluateBoard = true;
-    int j = 0;
+    int col = 0; int row = ROWS -1;
     for (int i = ROWS -1 ;i>=0;i--)
     {
         
-        BOOL Result =  [self horizantal : i : j : WINCOUNT : WINCOUNT]  || [self vertical : j+ROWS-1 : ROWS-1-i : WINCOUNT : WINCOUNT];
+        BOOL Result =  [self horizantal : i : col : WINCOUNT : WINCOUNT]  ;
         
         if (Result)
         {      self.isEvaluateBoard = false;
+            return  self.winner == 1 ? 10 : -10;
+        }
+    }
+    for (int i= COLUMNS-1; i>=0;i--)
+    {
+        int result = [self vertical:row :i :WINCOUNT :WINCOUNT];
+        if (result) {
+            self.isEvaluateBoard = false;
             return  self.winner == 1 ? 10 : -10;
         }
     }
@@ -274,16 +282,22 @@ struct Move {
     return [self UpperDiagonal:i-1 :j+1 :player1Count :player2Count];
 }
 -(BOOL) findRowHorizantallyAndVertically
-{        int j = 0;
+{        int col = 0; int row = ROWS -1;
     for (int i = ROWS -1 ;i>=0;i--)
     {
         
-        int Result =  [self horizantal : i : j : WINCOUNT : WINCOUNT]  || [self vertical : j+ROWS-1 : ROWS-1-i : WINCOUNT : WINCOUNT];
+        int Result =  [self horizantal : i : col : WINCOUNT : WINCOUNT]  ;
         
         if (Result)
         {
             return Result;
         }
+    }
+    for (int i= COLUMNS-1; i>=0;i--)
+    {
+        int result = [self vertical:row :i :WINCOUNT :WINCOUNT];
+        if (result)
+            return result;
     }
     return 0;
 }
@@ -348,7 +362,7 @@ struct Move {
     self = [super init];
     for(int i=0;i<ROWS;i++)
     {    self.winner = 0;
-        for(int j=0;j<ROWS;j++)
+        for(int j=0;j<COLUMNS;j++)
         {
             game[i][j] = -1;
         }
@@ -367,7 +381,7 @@ struct Move {
 -(BOOL) isValidMove : (NSInteger) index
 {    NSInteger columnNum = index % COLUMNS;
     //NSLog(@"index = %d columns = %d",index,columnNum);
-    for(NSInteger i = (index/COLUMNS)+1;i<COLUMNS;i++)
+    for(NSInteger i = (index/COLUMNS)+1;i<ROWS;i++)
     {
         if(game[i][columnNum] == -1)
             return NO;

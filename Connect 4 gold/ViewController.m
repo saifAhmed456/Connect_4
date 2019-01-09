@@ -21,7 +21,8 @@
 
 @implementation ViewController
 static int i = 0;
-#define NUM 5
+#define NUM 6
+#define COL 7
 -(ConnectFourGoldGame *)game
 {
     if(!_game)
@@ -34,7 +35,7 @@ static int i = 0;
 {
     CGFloat width = self.collectionView.bounds.size.width;
     //CGFloat height = self.collectionView.bounds.size.height;
-    return   ( CGSizeMake ( (width/NUM ) - 6 , (width/NUM)  -6 ) )  ;
+    return   ( CGSizeMake ( (width/COL ) - 6 , (width/COL)  -6 ) )  ;
 }
 
 - (void)viewDidLoad {
@@ -103,7 +104,7 @@ static int i = 0;
     i = 0;
     self.ResetButton.hidden = YES;
     self.gameOverImageView.hidden =YES;
-    for ( NSInteger i=0;i<NUM * NUM;i++)
+    for ( NSInteger i=0;i<NUM * COL;i++)
     {
     {
         NSIndexPath * indexPath = [NSIndexPath indexPathForRow:i inSection:0];
@@ -122,8 +123,8 @@ static int i = 0;
 -(void) gameOverUI
 {   self.ResetButton.hidden = NO;
     self.gameOverImageView.hidden =NO;
-    for ( NSInteger i=0;i<NUM * NUM;i++)
-    {   if ([self.game getValueForRow:i/NUM :i%NUM] != 10)
+    for ( NSInteger i=0;i<NUM * COL;i++)
+    {   if ([self.game getValueForRow:i/COL :i%COL] != 10)
     {
         NSIndexPath * indexPath = [NSIndexPath indexPathForRow:i inSection:0];
         UICollectionViewCell * cell = [self.collectionView cellForItemAtIndexPath:indexPath];
@@ -159,7 +160,7 @@ static int i = 0;
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return NUM * NUM;
+    return NUM * COL;
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
