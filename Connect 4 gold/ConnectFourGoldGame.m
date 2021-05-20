@@ -14,9 +14,10 @@ const int WINCOUNT = 4;
 const int  DEFAULT = -1;
 const int PLAYER1 = 0;
 const int  PLAYER2 = 1;
-NSInteger game[ROWS][COLUMNS];
+  NSInteger game[ROWS][COLUMNS];
 @interface ConnectFourGoldGame ()
 @property (nonatomic) BOOL isEvaluateBoard;
+//@property (nonatomic) NSInteger game[ROWS][COLUMNS];
 @end
 @implementation ConnectFourGoldGame
 /////////////////////////////////DISPLAY GAME ARRAY//////////////////////////////////////////////////////////////////////////

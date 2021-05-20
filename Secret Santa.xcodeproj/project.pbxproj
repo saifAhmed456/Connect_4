@@ -40,7 +40,7 @@
 /* Begin PBXFileReference section */
 		1B0BE2D421B6B3E1008A6FB0 /* ConnectFourGoldGame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConnectFourGoldGame.h; sourceTree = "<group>"; };
 		1B0BE2D521B6B3E1008A6FB0 /* ConnectFourGoldGame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConnectFourGoldGame.m; sourceTree = "<group>"; };
-		1BA4C8BA21A7E6F5005B6642 /* Connect 4 gold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Connect 4 gold.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BA4C8BA21A7E6F5005B6642 /* Secret Santa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Secret Santa.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BA4C8BD21A7E6F5005B6642 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1BA4C8BE21A7E6F5005B6642 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1BA4C8C021A7E6F5005B6642 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -52,10 +52,10 @@
 		1BA4C8CC21A7E6F8005B6642 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1BA4C8D321A7E7CB005B6642 /* GridView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GridView.h; sourceTree = "<group>"; };
 		1BA4C8D421A7E7CB005B6642 /* GridView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GridView.m; sourceTree = "<group>"; };
-		1BD741EB21FF08E30065FF20 /* Connect 4 goldTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Connect 4 goldTest.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BD741EB21FF08E30065FF20 /* Secret SantaTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Secret SantaTest.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BD741ED21FF08E30065FF20 /* Connect_4_goldTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Connect_4_goldTest.m; sourceTree = "<group>"; };
 		1BD741EF21FF08E30065FF20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1BD741FA21FF18F20065FF20 /* Connect 4 goldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Connect 4 goldUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BD741FA21FF18F20065FF20 /* Secret SantaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Secret SantaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BD741FC21FF18F20065FF20 /* Connect_4_goldUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Connect_4_goldUITests.m; sourceTree = "<group>"; };
 		1BD741FE21FF18F20065FF20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,9 +98,9 @@
 		1BA4C8BB21A7E6F5005B6642 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1BA4C8BA21A7E6F5005B6642 /* Connect 4 gold.app */,
-				1BD741EB21FF08E30065FF20 /* Connect 4 goldTest.xctest */,
-				1BD741FA21FF18F20065FF20 /* Connect 4 goldUITests.xctest */,
+				1BA4C8BA21A7E6F5005B6642 /* Secret Santa.app */,
+				1BD741EB21FF08E30065FF20 /* Secret SantaTest.xctest */,
+				1BD741FA21FF18F20065FF20 /* Secret SantaUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,9 +146,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1BA4C8B921A7E6F5005B6642 /* Connect 4 gold */ = {
+		1BA4C8B921A7E6F5005B6642 /* Secret Santa */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1BA4C8D021A7E6F8005B6642 /* Build configuration list for PBXNativeTarget "Connect 4 gold" */;
+			buildConfigurationList = 1BA4C8D021A7E6F8005B6642 /* Build configuration list for PBXNativeTarget "Secret Santa" */;
 			buildPhases = (
 				1BA4C8B621A7E6F5005B6642 /* Sources */,
 				1BA4C8B721A7E6F5005B6642 /* Frameworks */,
@@ -158,14 +158,14 @@
 			);
 			dependencies = (
 			);
-			name = "Connect 4 gold";
+			name = "Secret Santa";
 			productName = "Connect 4 gold";
-			productReference = 1BA4C8BA21A7E6F5005B6642 /* Connect 4 gold.app */;
+			productReference = 1BA4C8BA21A7E6F5005B6642 /* Secret Santa.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1BD741EA21FF08E30065FF20 /* Connect 4 goldTest */ = {
+		1BD741EA21FF08E30065FF20 /* Secret SantaTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1BD741F221FF08E30065FF20 /* Build configuration list for PBXNativeTarget "Connect 4 goldTest" */;
+			buildConfigurationList = 1BD741F221FF08E30065FF20 /* Build configuration list for PBXNativeTarget "Secret SantaTest" */;
 			buildPhases = (
 				1BD741E721FF08E30065FF20 /* Sources */,
 				1BD741E821FF08E30065FF20 /* Frameworks */,
@@ -176,14 +176,14 @@
 			dependencies = (
 				1BD741F121FF08E30065FF20 /* PBXTargetDependency */,
 			);
-			name = "Connect 4 goldTest";
+			name = "Secret SantaTest";
 			productName = "Connect 4 goldTest";
-			productReference = 1BD741EB21FF08E30065FF20 /* Connect 4 goldTest.xctest */;
+			productReference = 1BD741EB21FF08E30065FF20 /* Secret SantaTest.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		1BD741F921FF18F20065FF20 /* Connect 4 goldUITests */ = {
+		1BD741F921FF18F20065FF20 /* Secret SantaUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1BD7420121FF18F20065FF20 /* Build configuration list for PBXNativeTarget "Connect 4 goldUITests" */;
+			buildConfigurationList = 1BD7420121FF18F20065FF20 /* Build configuration list for PBXNativeTarget "Secret SantaUITests" */;
 			buildPhases = (
 				1BD741F621FF18F20065FF20 /* Sources */,
 				1BD741F721FF18F20065FF20 /* Frameworks */,
@@ -194,9 +194,9 @@
 			dependencies = (
 				1BD7420021FF18F20065FF20 /* PBXTargetDependency */,
 			);
-			name = "Connect 4 goldUITests";
+			name = "Secret SantaUITests";
 			productName = "Connect 4 goldUITests";
-			productReference = 1BD741FA21FF18F20065FF20 /* Connect 4 goldUITests.xctest */;
+			productReference = 1BD741FA21FF18F20065FF20 /* Secret SantaUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -222,7 +222,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1BA4C8B521A7E6F5005B6642 /* Build configuration list for PBXProject "Connect 4 gold" */;
+			buildConfigurationList = 1BA4C8B521A7E6F5005B6642 /* Build configuration list for PBXProject "Secret Santa" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -235,9 +235,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1BA4C8B921A7E6F5005B6642 /* Connect 4 gold */,
-				1BD741EA21FF08E30065FF20 /* Connect 4 goldTest */,
-				1BD741F921FF18F20065FF20 /* Connect 4 goldUITests */,
+				1BA4C8B921A7E6F5005B6642 /* Secret Santa */,
+				1BD741EA21FF08E30065FF20 /* Secret SantaTest */,
+				1BD741F921FF18F20065FF20 /* Secret SantaUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -304,12 +304,12 @@
 /* Begin PBXTargetDependency section */
 		1BD741F121FF08E30065FF20 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1BA4C8B921A7E6F5005B6642 /* Connect 4 gold */;
+			target = 1BA4C8B921A7E6F5005B6642 /* Secret Santa */;
 			targetProxy = 1BD741F021FF08E30065FF20 /* PBXContainerItemProxy */;
 		};
 		1BD7420021FF18F20065FF20 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1BA4C8B921A7E6F5005B6642 /* Connect 4 gold */;
+			target = 1BA4C8B921A7E6F5005B6642 /* Secret Santa */;
 			targetProxy = 1BD741FF21FF18F20065FF20 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -498,7 +498,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.untd.corp.asshaik.Connect-4-goldTest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Connect 4 gold.app/Connect 4 gold";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Secret Santa.app/Secret Santa";
 			};
 			name = Debug;
 		};
@@ -519,7 +519,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.untd.corp.asshaik.Connect-4-goldTest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Connect 4 gold.app/Connect 4 gold";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Secret Santa.app/Secret Santa";
 			};
 			name = Release;
 		};
@@ -567,7 +567,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1BA4C8B521A7E6F5005B6642 /* Build configuration list for PBXProject "Connect 4 gold" */ = {
+		1BA4C8B521A7E6F5005B6642 /* Build configuration list for PBXProject "Secret Santa" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1BA4C8CE21A7E6F8005B6642 /* Debug */,
@@ -576,7 +576,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1BA4C8D021A7E6F8005B6642 /* Build configuration list for PBXNativeTarget "Connect 4 gold" */ = {
+		1BA4C8D021A7E6F8005B6642 /* Build configuration list for PBXNativeTarget "Secret Santa" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1BA4C8D121A7E6F8005B6642 /* Debug */,
@@ -585,7 +585,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1BD741F221FF08E30065FF20 /* Build configuration list for PBXNativeTarget "Connect 4 goldTest" */ = {
+		1BD741F221FF08E30065FF20 /* Build configuration list for PBXNativeTarget "Secret SantaTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1BD741F321FF08E30065FF20 /* Debug */,
@@ -594,7 +594,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1BD7420121FF18F20065FF20 /* Build configuration list for PBXNativeTarget "Connect 4 goldUITests" */ = {
+		1BD7420121FF18F20065FF20 /* Build configuration list for PBXNativeTarget "Secret SantaUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1BD7420221FF18F20065FF20 /* Debug */,

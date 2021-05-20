@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *cellImageView;
 @property (strong,nonatomic) GridView * gridview;
 @property(strong,nonatomic)ConnectFourGoldGame * game;
+@property(nonatomic)BOOL inProgress ;
 @end
 
 @implementation ViewController
@@ -41,6 +42,7 @@ static int i = 0;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
     self.ResetButton.hidden = YES;
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
@@ -54,20 +56,23 @@ static int i = 0;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {   //NSLog(@"height = %f",self.collectionView.bounds.size.height);
-    if([self.game isValidMove:indexPath.row]  && [self.game isGameOver] == false)
+    //[self displayWinAlert:@"Congratulations !!!" :@"You have unlocked the next puzzle..."];
+    if([self.game isValidMove:indexPath.row]  && [self.game isGameOver] == false && self.inProgress == false )
     {          NSLog(@"inside did select");
+        self.inProgress = true;
         [self.game updateGameArray:indexPath.row player:1];
         UICollectionViewCell * cell = [collectionView cellForItemAtIndexPath:indexPath];
-        UIImageView * cellView = [[UIImageView alloc] initWithFrame:cell.contentView.frame];
+       // UIImageView * cellView = [[UIImageView alloc] initWithFrame:cell.contentView.frame];
         //cellView.image =  [self getImageForPlayer:i%2];
-        cellView.contentMode = UIViewContentModeScaleAspectFill;
+        //cellView.contentMode = UIViewContentModeScaleAspectFill;
         
-        [cell.contentView addSubview:cellView];
+       // [cell.contentView addSubview:cellView];
         cell.contentView.backgroundColor = [self getColorForPlayer : 0];
        // [self.game displayGameArray];
         
         if([self.game isGameOver])
         { NSLog(@"game over");
+            
             [self gameOverUI];
         }
         
@@ -85,6 +90,7 @@ static int i = 0;
                     { NSLog(@"game over");
                         [self gameOverUI];
                     }
+                    self.inProgress = false ;
                 });
             });
             
@@ -97,8 +103,73 @@ static int i = 0;
     
     if (! [self.game areMovesLeft]){
         self.ResetButton.hidden = NO;
+        [self displayWinAlert:@"Match is Drawn" :@"But its okay you have tried hard👍👍...You have unlocked the next puzzle..."];
     }
 }
+- (void)displayLostAlert
+{
+     UIAlertController * alert = [UIAlertController
+                                 alertControllerWithTitle:@"You Lost"
+                                 message:@"Better Luck Next Time!! Do you want to restart?"
+                                 preferredStyle:UIAlertControllerStyleAlert];
+
+    //Add Buttons
+
+    UIAlertAction* yesButton = [UIAlertAction
+                                actionWithTitle:@"Yes"
+                                style:UIAlertActionStyleDefault
+                                handler:^(UIAlertAction * action) {
+                                    //Handle your yes please button action here
+        [self RestartGame: self.ResetButton];
+                                }];
+
+    UIAlertAction* noButton = [UIAlertAction
+                               actionWithTitle:@"No"
+                               style:UIAlertActionStyleCancel
+                               handler:^(UIAlertAction * action) {
+                                   //Handle no, thanks button
+                               }];
+
+    //Add your buttons to alert controller
+
+    [alert addAction:yesButton];
+    [alert addAction:noButton];
+
+    [self presentViewController:alert animated:YES completion:nil];
+}
+- (void)displayWinAlert :(NSString *)title :(NSString *)message
+{
+     UIAlertController * alert = [UIAlertController
+                                 alertControllerWithTitle:title
+                                 message:message
+                                 preferredStyle:UIAlertControllerStyleAlert];
+
+    //Add Buttons
+
+    UIAlertAction* yesButton = [UIAlertAction
+                                actionWithTitle:@"Yes"
+                                style:UIAlertActionStyleDefault
+                                handler:^(UIAlertAction * action) {
+                                    //Handle your yes please button action here
+        [NSUserDefaults.standardUserDefaults setBool:true forKey:@"GameOver"];
+        [self goToViewController];
+                                }];
+
+//   // UIAlertAction* noButton = [UIAlertAction
+//                               actionWithTitle:@"No"
+//                               style:UIAlertActionStyleCancel
+//                               handler:^(UIAlertAction * action) {
+//                                   //Handle no, thanks button
+//                               }];
+
+    //Add your buttons to alert controller
+
+    [alert addAction:yesButton];
+   // [alert addAction:noButton];
+
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
 - (IBAction)RestartGame:(id)sender {
     self.game = nil;
     i = 0;
@@ -109,7 +180,7 @@ static int i = 0;
     {
         NSIndexPath * indexPath = [NSIndexPath indexPathForRow:i inSection:0];
         UICollectionViewCell * cell = [self.collectionView cellForItemAtIndexPath:indexPath];
-        cell.contentView.backgroundColor = [self getColorForPlayer:2];
+        cell.contentView.backgroundColor = [self getColorForPlayer:4];
         UIView * view  = [[cell.contentView subviews] firstObject] ;
         if ([view isKindOfClass:[UIImageView class] ])
         {
@@ -119,6 +190,12 @@ static int i = 0;
     }
         
     }
+}
+-(void) goToViewController {
+    NSString * storyboardName = @"Main";
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
+    UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"UnlockedController"];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 -(void) gameOverUI
 {   self.ResetButton.hidden = NO;
@@ -156,6 +233,7 @@ static int i = 0;
         case 1 :  return  [[UIColor redColor] colorWithAlphaComponent:0.6];
         case 2 : return [UIColor whiteColor];
         default :  return  [UIColor colorWithWhite:0.4 alpha:0.4];
+        case 4 : return [UIColor clearColor];
     }
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -167,6 +245,7 @@ static int i = 0;
     UICollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Game cell" forIndexPath:indexPath];
     cell.contentView.layer.borderColor = [UIColor blackColor].CGColor;
     [cell.contentView setFrame:cell.frame];
+    cell.backgroundColor = [self getColorForPlayer:4];
    // NSLog(@"h = %f w = %f",cell.bounds.size.height, cell.bounds.size.width);
     //NSLog(@"content view h =%f w = %f", cell.contentView.bounds.size.height, cell.contentView.bounds.size.width);
     cell.contentView.layer.cornerRadius = cell.contentView.bounds.size.width/2;
