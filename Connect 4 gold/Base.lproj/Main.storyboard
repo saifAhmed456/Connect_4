@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="huq-Tt-Wwh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dp5-DU-zDD">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZND-qP-yfc">
+                                        <rect key="frame" x="20" y="50" width="335" height="135.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">To win Connect Four you must be the first player to get four of your colored checkers in a row either horizontally, vertically or diagonally.
+</string>
+                                        <color key="textColor" systemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How To win:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngl-Ga-Ajk">
+                                        <rect key="frame" x="20" y="20" width="104" height="22"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1b-qF-63b">
+                                        <rect key="frame" x="309" y="20" width="46" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Reset"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="roundedRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="RestartGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j4g-SV-6nR"/>
+                                        </connections>
+                                    </button>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4JB-vM-SUO">
+                                        <rect key="frame" x="20" y="225.5" width="335" height="216"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="7" minimumInteritemSpacing="6" id="MF8-TZ-jnV">
+                                            <size key="itemSize" width="50" height="50"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <imageView key="backgroundView" userInteractionEnabled="NO" alpha="0.01" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="fgj-Bt-3Ap">
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="216"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Game cell" id="4jK-cy-80g">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </view>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="ZND-qP-yfc" firstAttribute="top" secondItem="ngl-Ga-Ajk" secondAttribute="bottom" constant="8" symbolic="YES" id="2zn-X7-1dD"/>
+                                    <constraint firstAttribute="trailing" secondItem="m1b-qF-63b" secondAttribute="trailing" constant="20" symbolic="YES" id="54C-nx-rFd"/>
+                                    <constraint firstItem="4JB-vM-SUO" firstAttribute="centerX" secondItem="huq-Tt-Wwh" secondAttribute="centerX" id="5LZ-kP-YNS"/>
+                                    <constraint firstItem="m1b-qF-63b" firstAttribute="top" secondItem="huq-Tt-Wwh" secondAttribute="top" constant="20" symbolic="YES" id="7vn-fS-V80"/>
+                                    <constraint firstItem="ngl-Ga-Ajk" firstAttribute="leading" secondItem="huq-Tt-Wwh" secondAttribute="leading" constant="20" symbolic="YES" id="FTA-9X-wr7"/>
+                                    <constraint firstItem="ZND-qP-yfc" firstAttribute="leading" secondItem="huq-Tt-Wwh" secondAttribute="leading" constant="20" symbolic="YES" id="G5S-40-WW7"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZND-qP-yfc" secondAttribute="trailing" constant="20" symbolic="YES" id="NWq-28-6W6"/>
+                                    <constraint firstItem="4JB-vM-SUO" firstAttribute="leading" secondItem="huq-Tt-Wwh" secondAttribute="leading" constant="20" id="RpI-US-luD"/>
+                                    <constraint firstItem="ngl-Ga-Ajk" firstAttribute="top" secondItem="huq-Tt-Wwh" secondAttribute="top" constant="20" symbolic="YES" id="dZV-ty-ao2"/>
+                                    <constraint firstItem="4JB-vM-SUO" firstAttribute="top" secondItem="ZND-qP-yfc" secondAttribute="bottom" constant="40" id="jng-iZ-a9G"/>
+                                    <constraint firstItem="4JB-vM-SUO" firstAttribute="centerY" secondItem="huq-Tt-Wwh" secondAttribute="centerY" id="wjE-zi-OCx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dp5-DU-zDD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0a7-zz-hU6"/>
+                            <constraint firstItem="huq-Tt-Wwh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4sp-8w-4qb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dp5-DU-zDD" secondAttribute="trailing" id="6ee-sr-R3A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dp5-DU-zDD" secondAttribute="bottom" id="9eE-Yo-zkg"/>
+                            <constraint firstItem="huq-Tt-Wwh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="TsB-hr-HUu"/>
+                            <constraint firstItem="huq-Tt-Wwh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="VYF-4n-hGf"/>
+                            <constraint firstItem="huq-Tt-Wwh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hgB-Ub-zGb"/>
+                            <constraint firstItem="dp5-DU-zDD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jzj-IA-iXL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ResetButton" destination="m1b-qF-63b" id="eZk-Ef-Y0g"/>
+                        <outlet property="collectionView" destination="4JB-vM-SUO" id="Oyn-jG-Cg1"/>
+                        <outlet property="gameOverImageView" destination="fgj-Bt-3Ap" id="qIr-zB-oUL"/>
+                        <outlet property="imageView" destination="dp5-DU-zDD" id="GfU-zD-2ZZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2087" y="-857"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qtA-pw-hiB">
+            <objects>
+                <viewController restorationIdentifier="UnlockedController" storyboardIdentifier="UnlockedController" id="O1V-8P-veD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ywr-hg-ufo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8Jy-ns-lpX">
+                                <rect key="frame" x="20" y="20" width="335" height="647"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations Sneha !!! , You have won the game against me." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wm9-CC-VhL">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="53"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dfK-4p-NM0">
+                                        <rect key="frame" x="0.0" y="63" width="335" height="584"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <string key="text">Now this is the final riddle you have to solve to find me.
+
+There are 212 people standing around in a circle.
+First person holds a sword in his hand. He kills the person next to him (i.e second) and passes the sword to his next. (i.e to third).After 211th person kills 212nd person, he passes on the sword to the next person alive.(i.e to first person).
+This process continues as long as there is only one person alive.
+Your puzzle is to find the person who will stay alive at the end of this game.(i.e the position of the person in the first round of this game)
+
+Add 8000 to the answer and you have my extension number. Have fun !!!
+</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Xyt-95-WbU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xyt-95-WbU" firstAttribute="trailing" secondItem="8Jy-ns-lpX" secondAttribute="trailing" constant="20" id="1dA-Fm-T1o"/>
+                            <constraint firstItem="8Jy-ns-lpX" firstAttribute="leading" secondItem="Xyt-95-WbU" secondAttribute="leading" constant="20" id="TTN-Kp-gtb"/>
+                            <constraint firstItem="8Jy-ns-lpX" firstAttribute="bottom" secondItem="Xyt-95-WbU" secondAttribute="bottom" id="cwm-Zt-wFA"/>
+                            <constraint firstItem="8Jy-ns-lpX" firstAttribute="top" secondItem="Xyt-95-WbU" secondAttribute="top" constant="20" id="rfo-FT-jFS"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e95-ff-Qns" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1012" y="-56"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jXZ-X5-2GK">
+            <objects>
+                <viewController id="cNf-Bb-nHw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d8M-oa-AIV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="bP6-aW-rj8"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="61z-94-bAc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-82" y="-56"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
