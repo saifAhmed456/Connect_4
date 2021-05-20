@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B0BE2D621B6B3E1008A6FB0 /* ConnectFourGoldGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0BE2D521B6B3E1008A6FB0 /* ConnectFourGoldGame.m */; };
+		1BA4C8BF21A7E6F5005B6642 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA4C8BE21A7E6F5005B6642 /* AppDelegate.m */; };
+		1BA4C8C221A7E6F5005B6642 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA4C8C121A7E6F5005B6642 /* ViewController.m */; };
+		1BA4C8C521A7E6F5005B6642 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BA4C8C321A7E6F5005B6642 /* Main.storyboard */; };
+		1BA4C8C721A7E6F8005B6642 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BA4C8C621A7E6F8005B6642 /* Assets.xcassets */; };
+		1BA4C8CA21A7E6F8005B6642 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BA4C8C821A7E6F8005B6642 /* LaunchScreen.storyboard */; };
+		1BA4C8CD21A7E6F8005B6642 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA4C8CC21A7E6F8005B6642 /* main.m */; };
+		1BA4C8D521A7E7CB005B6642 /* GridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA4C8D421A7E7CB005B6642 /* GridView.m */; };
+		1BD741EE21FF08E30065FF20 /* Connect_4_goldTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BD741ED21FF08E30065FF20 /* Connect_4_goldTest.m */; };
+		1BD741F521FF0B0B0065FF20 /* ConnectFourGoldGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0BE2D521B6B3E1008A6FB0 /* ConnectFourGoldGame.m */; };
+		1BD741FD21FF18F20065FF20 /* Connect_4_goldUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BD741FC21FF18F20065FF20 /* Connect_4_goldUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1BD741F021FF08E30065FF20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1BA4C8B221A7E6F5005B6642 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1BA4C8B921A7E6F5005B6642;
+			remoteInfo = "Connect 4 gold";
+		};
+		1BD741FF21FF18F20065FF20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1BA4C8B221A7E6F5005B6642 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1BA4C8B921A7E6F5005B6642;
+			remoteInfo = "Connect 4 gold";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1B0BE2D421B6B3E1008A6FB0 /* ConnectFourGoldGame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConnectFourGoldGame.h; sourceTree = "<group>"; };
+		1B0BE2D521B6B3E1008A6FB0 /* ConnectFourGoldGame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConnectFourGoldGame.m; sourceTree = "<group>"; };
+		1BA4C8BA21A7E6F5005B6642 /* Secret Santa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Secret Santa.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BA4C8BD21A7E6F5005B6642 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1BA4C8BE21A7E6F5005B6642 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1BA4C8C021A7E6F5005B6642 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1BA4C8C121A7E6F5005B6642 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1BA4C8C421A7E6F5005B6642 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1BA4C8C621A7E6F8005B6642 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1BA4C8C921A7E6F8005B6642 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1BA4C8CB21A7E6F8005B6642 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BA4C8CC21A7E6F8005B6642 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1BA4C8D321A7E7CB005B6642 /* GridView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GridView.h; sourceTree = "<group>"; };
+		1BA4C8D421A7E7CB005B6642 /* GridView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GridView.m; sourceTree = "<group>"; };
+		1BD741EB21FF08E30065FF20 /* Secret SantaTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Secret SantaTest.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BD741ED21FF08E30065FF20 /* Connect_4_goldTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Connect_4_goldTest.m; sourceTree = "<group>"; };
+		1BD741EF21FF08E30065FF20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BD741FA21FF18F20065FF20 /* Secret SantaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Secret SantaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BD741FC21FF18F20065FF20 /* Connect_4_goldUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Connect_4_goldUITests.m; sourceTree = "<group>"; };
+		1BD741FE21FF18F20065FF20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1BA4C8B721A7E6F5005B6642 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BD741E821FF08E30065FF20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BD741F721FF18F20065FF20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1BA4C8B121A7E6F5005B6642 = {
+			isa = PBXGroup;
+			children = (
+				1BA4C8BC21A7E6F5005B6642 /* Connect 4 gold */,
+				1BD741EC21FF08E30065FF20 /* Connect 4 goldTest */,
+				1BD741FB21FF18F20065FF20 /* Connect 4 goldUITests */,
+				1BA4C8BB21A7E6F5005B6642 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1BA4C8BB21A7E6F5005B6642 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1BA4C8BA21A7E6F5005B6642 /* Secret Santa.app */,
+				1BD741EB21FF08E30065FF20 /* Secret SantaTest.xctest */,
+				1BD741FA21FF18F20065FF20 /* Secret SantaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1BA4C8BC21A7E6F5005B6642 /* Connect 4 gold */ = {
+			isa = PBXGroup;
+			children = (
+				1BA4C8BD21A7E6F5005B6642 /* AppDelegate.h */,
+				1BA4C8BE21A7E6F5005B6642 /* AppDelegate.m */,
+				1BA4C8C021A7E6F5005B6642 /* ViewController.h */,
+				1BA4C8C121A7E6F5005B6642 /* ViewController.m */,
+				1B0BE2D421B6B3E1008A6FB0 /* ConnectFourGoldGame.h */,
+				1B0BE2D521B6B3E1008A6FB0 /* ConnectFourGoldGame.m */,
+				1BA4C8C321A7E6F5005B6642 /* Main.storyboard */,
+				1BA4C8D321A7E7CB005B6642 /* GridView.h */,
+				1BA4C8D421A7E7CB005B6642 /* GridView.m */,
+				1BA4C8C621A7E6F8005B6642 /* Assets.xcassets */,
+				1BA4C8C821A7E6F8005B6642 /* LaunchScreen.storyboard */,
+				1BA4C8CB21A7E6F8005B6642 /* Info.plist */,
+				1BA4C8CC21A7E6F8005B6642 /* main.m */,
+			);
+			path = "Connect 4 gold";
+			sourceTree = "<group>";
+		};
+		1BD741EC21FF08E30065FF20 /* Connect 4 goldTest */ = {
+			isa = PBXGroup;
+			children = (
+				1BD741ED21FF08E30065FF20 /* Connect_4_goldTest.m */,
+				1BD741EF21FF08E30065FF20 /* Info.plist */,
+			);
+			path = "Connect 4 goldTest";
+			sourceTree = "<group>";
+		};
+		1BD741FB21FF18F20065FF20 /* Connect 4 goldUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1BD741FC21FF18F20065FF20 /* Connect_4_goldUITests.m */,
+				1BD741FE21FF18F20065FF20 /* Info.plist */,
+			);
+			path = "Connect 4 goldUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1BA4C8B921A7E6F5005B6642 /* Secret Santa */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BA4C8D021A7E6F8005B6642 /* Build configuration list for PBXNativeTarget "Secret Santa" */;
+			buildPhases = (
+				1BA4C8B621A7E6F5005B6642 /* Sources */,
+				1BA4C8B721A7E6F5005B6642 /* Frameworks */,
+				1BA4C8B821A7E6F5005B6642 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Secret Santa";
+			productName = "Connect 4 gold";
+			productReference = 1BA4C8BA21A7E6F5005B6642 /* Secret Santa.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1BD741EA21FF08E30065FF20 /* Secret SantaTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BD741F221FF08E30065FF20 /* Build configuration list for PBXNativeTarget "Secret SantaTest" */;
+			buildPhases = (
+				1BD741E721FF08E30065FF20 /* Sources */,
+				1BD741E821FF08E30065FF20 /* Frameworks */,
+				1BD741E921FF08E30065FF20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1BD741F121FF08E30065FF20 /* PBXTargetDependency */,
+			);
+			name = "Secret SantaTest";
+			productName = "Connect 4 goldTest";
+			productReference = 1BD741EB21FF08E30065FF20 /* Secret SantaTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1BD741F921FF18F20065FF20 /* Secret SantaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BD7420121FF18F20065FF20 /* Build configuration list for PBXNativeTarget "Secret SantaUITests" */;
+			buildPhases = (
+				1BD741F621FF18F20065FF20 /* Sources */,
+				1BD741F721FF18F20065FF20 /* Frameworks */,
+				1BD741F821FF18F20065FF20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1BD7420021FF18F20065FF20 /* PBXTargetDependency */,
+			);
+			name = "Secret SantaUITests";
+			productName = "Connect 4 goldUITests";
+			productReference = 1BD741FA21FF18F20065FF20 /* Secret SantaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1BA4C8B221A7E6F5005B6642 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "SHAIK AS";
+				TargetAttributes = {
+					1BA4C8B921A7E6F5005B6642 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					1BD741EA21FF08E30065FF20 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 1BA4C8B921A7E6F5005B6642;
+					};
+					1BD741F921FF18F20065FF20 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 1BA4C8B921A7E6F5005B6642;
+					};
+				};
+			};
+			buildConfigurationList = 1BA4C8B521A7E6F5005B6642 /* Build configuration list for PBXProject "Secret Santa" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1BA4C8B121A7E6F5005B6642;
+			productRefGroup = 1BA4C8BB21A7E6F5005B6642 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1BA4C8B921A7E6F5005B6642 /* Secret Santa */,
+				1BD741EA21FF08E30065FF20 /* Secret SantaTest */,
+				1BD741F921FF18F20065FF20 /* Secret SantaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1BA4C8B821A7E6F5005B6642 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BA4C8CA21A7E6F8005B6642 /* LaunchScreen.storyboard in Resources */,
+				1BA4C8C721A7E6F8005B6642 /* Assets.xcassets in Resources */,
+				1BA4C8C521A7E6F5005B6642 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BD741E921FF08E30065FF20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BD741F821FF18F20065FF20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1BA4C8B621A7E6F5005B6642 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BA4C8C221A7E6F5005B6642 /* ViewController.m in Sources */,
+				1B0BE2D621B6B3E1008A6FB0 /* ConnectFourGoldGame.m in Sources */,
+				1BA4C8CD21A7E6F8005B6642 /* main.m in Sources */,
+				1BA4C8D521A7E7CB005B6642 /* GridView.m in Sources */,
+				1BA4C8BF21A7E6F5005B6642 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BD741E721FF08E30065FF20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BD741F521FF0B0B0065FF20 /* ConnectFourGoldGame.m in Sources */,
+				1BD741EE21FF08E30065FF20 /* Connect_4_goldTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BD741F621FF18F20065FF20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BD741FD21FF18F20065FF20 /* Connect_4_goldUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1BD741F121FF08E30065FF20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1BA4C8B921A7E6F5005B6642 /* Secret Santa */;
+			targetProxy = 1BD741F021FF08E30065FF20 /* PBXContainerItemProxy */;
+		};
+		1BD7420021FF18F20065FF20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1BA4C8B921A7E6F5005B6642 /* Secret Santa */;
+			targetProxy = 1BD741FF21FF18F20065FF20 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1BA4C8C321A7E6F5005B6642 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1BA4C8C421A7E6F5005B6642 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1BA4C8C821A7E6F8005B6642 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1BA4C8C921A7E6F8005B6642 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1BA4C8CE21A7E6F8005B6642 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1BA4C8CF21A7E6F8005B6642 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1BA4C8D121A7E6F8005B6642 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P2TFRK3JG3;
+				INFOPLIST_FILE = "Connect 4 gold/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.untd.corp.asshaik.Connect-4-gold";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1BA4C8D221A7E6F8005B6642 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P2TFRK3JG3;
+				INFOPLIST_FILE = "Connect 4 gold/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.untd.corp.asshaik.Connect-4-gold";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1BD741F321FF08E30065FF20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 23S79YTQQD;
+				INFOPLIST_FILE = "Connect 4 goldTest/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.untd.corp.asshaik.Connect-4-goldTest";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Secret Santa.app/Secret Santa";
+			};
+			name = Debug;
+		};
+		1BD741F421FF08E30065FF20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 23S79YTQQD;
+				INFOPLIST_FILE = "Connect 4 goldTest/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.untd.corp.asshaik.Connect-4-goldTest";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Secret Santa.app/Secret Santa";
+			};
+			name = Release;
+		};
+		1BD7420221FF18F20065FF20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 23S79YTQQD;
+				INFOPLIST_FILE = "Connect 4 goldUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.untd.corp.asshaik.Connect-4-goldUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Connect 4 gold";
+			};
+			name = Debug;
+		};
+		1BD7420321FF18F20065FF20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 23S79YTQQD;
+				INFOPLIST_FILE = "Connect 4 goldUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.untd.corp.asshaik.Connect-4-goldUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Connect 4 gold";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1BA4C8B521A7E6F5005B6642 /* Build configuration list for PBXProject "Secret Santa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BA4C8CE21A7E6F8005B6642 /* Debug */,
+				1BA4C8CF21A7E6F8005B6642 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BA4C8D021A7E6F8005B6642 /* Build configuration list for PBXNativeTarget "Secret Santa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BA4C8D121A7E6F8005B6642 /* Debug */,
+				1BA4C8D221A7E6F8005B6642 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BD741F221FF08E30065FF20 /* Build configuration list for PBXNativeTarget "Secret SantaTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BD741F321FF08E30065FF20 /* Debug */,
+				1BD741F421FF08E30065FF20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BD7420121FF18F20065FF20 /* Build configuration list for PBXNativeTarget "Secret SantaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BD7420221FF18F20065FF20 /* Debug */,
+				1BD7420321FF18F20065FF20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1BA4C8B221A7E6F5005B6642 /* Project object */;
+}
