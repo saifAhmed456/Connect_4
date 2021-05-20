@@ -28,6 +28,36 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1BD741DC21FF08940065FF20"
+               BuildableName = "Connect 4 goldTests.xctest"
+               BlueprintName = "Connect 4 goldTests"
+               ReferencedContainer = "container:Connect 4 gold.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1BD741EA21FF08E30065FF20"
+               BuildableName = "Connect 4 goldTest.xctest"
+               BlueprintName = "Connect 4 goldTest"
+               ReferencedContainer = "container:Connect 4 gold.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1BD741F921FF18F20065FF20"
+               BuildableName = "Connect 4 goldUITests.xctest"
+               BlueprintName = "Connect 4 goldUITests"
+               ReferencedContainer = "container:Connect 4 gold.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

@@ -15,7 +15,27 @@
 		1BA4C8CA21A7E6F8005B6642 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BA4C8C821A7E6F8005B6642 /* LaunchScreen.storyboard */; };
 		1BA4C8CD21A7E6F8005B6642 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA4C8CC21A7E6F8005B6642 /* main.m */; };
 		1BA4C8D521A7E7CB005B6642 /* GridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA4C8D421A7E7CB005B6642 /* GridView.m */; };
+		1BD741EE21FF08E30065FF20 /* Connect_4_goldTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BD741ED21FF08E30065FF20 /* Connect_4_goldTest.m */; };
+		1BD741F521FF0B0B0065FF20 /* ConnectFourGoldGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0BE2D521B6B3E1008A6FB0 /* ConnectFourGoldGame.m */; };
+		1BD741FD21FF18F20065FF20 /* Connect_4_goldUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BD741FC21FF18F20065FF20 /* Connect_4_goldUITests.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1BD741F021FF08E30065FF20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1BA4C8B221A7E6F5005B6642 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1BA4C8B921A7E6F5005B6642;
+			remoteInfo = "Connect 4 gold";
+		};
+		1BD741FF21FF18F20065FF20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1BA4C8B221A7E6F5005B6642 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1BA4C8B921A7E6F5005B6642;
+			remoteInfo = "Connect 4 gold";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1B0BE2D421B6B3E1008A6FB0 /* ConnectFourGoldGame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConnectFourGoldGame.h; sourceTree = "<group>"; };
@@ -32,10 +52,30 @@
 		1BA4C8CC21A7E6F8005B6642 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1BA4C8D321A7E7CB005B6642 /* GridView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GridView.h; sourceTree = "<group>"; };
 		1BA4C8D421A7E7CB005B6642 /* GridView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GridView.m; sourceTree = "<group>"; };
+		1BD741EB21FF08E30065FF20 /* Connect 4 goldTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Connect 4 goldTest.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BD741ED21FF08E30065FF20 /* Connect_4_goldTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Connect_4_goldTest.m; sourceTree = "<group>"; };
+		1BD741EF21FF08E30065FF20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BD741FA21FF18F20065FF20 /* Connect 4 goldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Connect 4 goldUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BD741FC21FF18F20065FF20 /* Connect_4_goldUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Connect_4_goldUITests.m; sourceTree = "<group>"; };
+		1BD741FE21FF18F20065FF20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1BA4C8B721A7E6F5005B6642 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BD741E821FF08E30065FF20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BD741F721FF18F20065FF20 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -49,6 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				1BA4C8BC21A7E6F5005B6642 /* Connect 4 gold */,
+				1BD741EC21FF08E30065FF20 /* Connect 4 goldTest */,
+				1BD741FB21FF18F20065FF20 /* Connect 4 goldUITests */,
 				1BA4C8BB21A7E6F5005B6642 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				1BA4C8BA21A7E6F5005B6642 /* Connect 4 gold.app */,
+				1BD741EB21FF08E30065FF20 /* Connect 4 goldTest.xctest */,
+				1BD741FA21FF18F20065FF20 /* Connect 4 goldUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,6 +125,24 @@
 			path = "Connect 4 gold";
 			sourceTree = "<group>";
 		};
+		1BD741EC21FF08E30065FF20 /* Connect 4 goldTest */ = {
+			isa = PBXGroup;
+			children = (
+				1BD741ED21FF08E30065FF20 /* Connect_4_goldTest.m */,
+				1BD741EF21FF08E30065FF20 /* Info.plist */,
+			);
+			path = "Connect 4 goldTest";
+			sourceTree = "<group>";
+		};
+		1BD741FB21FF18F20065FF20 /* Connect 4 goldUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1BD741FC21FF18F20065FF20 /* Connect_4_goldUITests.m */,
+				1BD741FE21FF18F20065FF20 /* Info.plist */,
+			);
+			path = "Connect 4 goldUITests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -101,17 +163,62 @@
 			productReference = 1BA4C8BA21A7E6F5005B6642 /* Connect 4 gold.app */;
 			productType = "com.apple.product-type.application";
 		};
+		1BD741EA21FF08E30065FF20 /* Connect 4 goldTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BD741F221FF08E30065FF20 /* Build configuration list for PBXNativeTarget "Connect 4 goldTest" */;
+			buildPhases = (
+				1BD741E721FF08E30065FF20 /* Sources */,
+				1BD741E821FF08E30065FF20 /* Frameworks */,
+				1BD741E921FF08E30065FF20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1BD741F121FF08E30065FF20 /* PBXTargetDependency */,
+			);
+			name = "Connect 4 goldTest";
+			productName = "Connect 4 goldTest";
+			productReference = 1BD741EB21FF08E30065FF20 /* Connect 4 goldTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1BD741F921FF18F20065FF20 /* Connect 4 goldUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BD7420121FF18F20065FF20 /* Build configuration list for PBXNativeTarget "Connect 4 goldUITests" */;
+			buildPhases = (
+				1BD741F621FF18F20065FF20 /* Sources */,
+				1BD741F721FF18F20065FF20 /* Frameworks */,
+				1BD741F821FF18F20065FF20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1BD7420021FF18F20065FF20 /* PBXTargetDependency */,
+			);
+			name = "Connect 4 goldUITests";
+			productName = "Connect 4 goldUITests";
+			productReference = 1BD741FA21FF18F20065FF20 /* Connect 4 goldUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		1BA4C8B221A7E6F5005B6642 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "SHAIK AS";
 				TargetAttributes = {
 					1BA4C8B921A7E6F5005B6642 = {
 						CreatedOnToolsVersion = 9.4.1;
+					};
+					1BD741EA21FF08E30065FF20 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 1BA4C8B921A7E6F5005B6642;
+					};
+					1BD741F921FF18F20065FF20 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 1BA4C8B921A7E6F5005B6642;
 					};
 				};
 			};
@@ -129,6 +236,8 @@
 			projectRoot = "";
 			targets = (
 				1BA4C8B921A7E6F5005B6642 /* Connect 4 gold */,
+				1BD741EA21FF08E30065FF20 /* Connect 4 goldTest */,
+				1BD741F921FF18F20065FF20 /* Connect 4 goldUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -141,6 +250,20 @@
 				1BA4C8CA21A7E6F8005B6642 /* LaunchScreen.storyboard in Resources */,
 				1BA4C8C721A7E6F8005B6642 /* Assets.xcassets in Resources */,
 				1BA4C8C521A7E6F5005B6642 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BD741E921FF08E30065FF20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BD741F821FF18F20065FF20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,7 +282,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1BD741E721FF08E30065FF20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BD741F521FF0B0B0065FF20 /* ConnectFourGoldGame.m in Sources */,
+				1BD741EE21FF08E30065FF20 /* Connect_4_goldTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BD741F621FF18F20065FF20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BD741FD21FF18F20065FF20 /* Connect_4_goldUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1BD741F121FF08E30065FF20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1BA4C8B921A7E6F5005B6642 /* Connect 4 gold */;
+			targetProxy = 1BD741F021FF08E30065FF20 /* PBXContainerItemProxy */;
+		};
+		1BD7420021FF18F20065FF20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1BA4C8B921A7E6F5005B6642 /* Connect 4 gold */;
+			targetProxy = 1BD741FF21FF18F20065FF20 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1BA4C8C321A7E6F5005B6642 /* Main.storyboard */ = {
@@ -296,7 +449,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 23S79YTQQD;
+				DEVELOPMENT_TEAM = P2TFRK3JG3;
 				INFOPLIST_FILE = "Connect 4 gold/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -314,7 +467,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 23S79YTQQD;
+				DEVELOPMENT_TEAM = P2TFRK3JG3;
 				INFOPLIST_FILE = "Connect 4 gold/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -324,6 +477,90 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.untd.corp.asshaik.Connect-4-gold";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1BD741F321FF08E30065FF20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 23S79YTQQD;
+				INFOPLIST_FILE = "Connect 4 goldTest/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.untd.corp.asshaik.Connect-4-goldTest";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Connect 4 gold.app/Connect 4 gold";
+			};
+			name = Debug;
+		};
+		1BD741F421FF08E30065FF20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 23S79YTQQD;
+				INFOPLIST_FILE = "Connect 4 goldTest/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.untd.corp.asshaik.Connect-4-goldTest";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Connect 4 gold.app/Connect 4 gold";
+			};
+			name = Release;
+		};
+		1BD7420221FF18F20065FF20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 23S79YTQQD;
+				INFOPLIST_FILE = "Connect 4 goldUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.untd.corp.asshaik.Connect-4-goldUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Connect 4 gold";
+			};
+			name = Debug;
+		};
+		1BD7420321FF18F20065FF20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 23S79YTQQD;
+				INFOPLIST_FILE = "Connect 4 goldUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.untd.corp.asshaik.Connect-4-goldUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Connect 4 gold";
 			};
 			name = Release;
 		};
@@ -344,6 +581,24 @@
 			buildConfigurations = (
 				1BA4C8D121A7E6F8005B6642 /* Debug */,
 				1BA4C8D221A7E6F8005B6642 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BD741F221FF08E30065FF20 /* Build configuration list for PBXNativeTarget "Connect 4 goldTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BD741F321FF08E30065FF20 /* Debug */,
+				1BD741F421FF08E30065FF20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BD7420121FF18F20065FF20 /* Build configuration list for PBXNativeTarget "Connect 4 goldUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BD7420221FF18F20065FF20 /* Debug */,
+				1BD7420321FF18F20065FF20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
