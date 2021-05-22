@@ -103,71 +103,7 @@ static int i = 0;
     
     if (! [self.game areMovesLeft]){
         self.ResetButton.hidden = NO;
-        [self displayWinAlert:@"Match is Drawn" :@"But its okay you have tried hard👍👍...You have unlocked the next puzzle..."];
     }
-}
-- (void)displayLostAlert
-{
-     UIAlertController * alert = [UIAlertController
-                                 alertControllerWithTitle:@"You Lost"
-                                 message:@"Better Luck Next Time!! Do you want to restart?"
-                                 preferredStyle:UIAlertControllerStyleAlert];
-
-    //Add Buttons
-
-    UIAlertAction* yesButton = [UIAlertAction
-                                actionWithTitle:@"Yes"
-                                style:UIAlertActionStyleDefault
-                                handler:^(UIAlertAction * action) {
-                                    //Handle your yes please button action here
-        [self RestartGame: self.ResetButton];
-                                }];
-
-    UIAlertAction* noButton = [UIAlertAction
-                               actionWithTitle:@"No"
-                               style:UIAlertActionStyleCancel
-                               handler:^(UIAlertAction * action) {
-                                   //Handle no, thanks button
-                               }];
-
-    //Add your buttons to alert controller
-
-    [alert addAction:yesButton];
-    [alert addAction:noButton];
-
-    [self presentViewController:alert animated:YES completion:nil];
-}
-- (void)displayWinAlert :(NSString *)title :(NSString *)message
-{
-     UIAlertController * alert = [UIAlertController
-                                 alertControllerWithTitle:title
-                                 message:message
-                                 preferredStyle:UIAlertControllerStyleAlert];
-
-    //Add Buttons
-
-    UIAlertAction* yesButton = [UIAlertAction
-                                actionWithTitle:@"Yes"
-                                style:UIAlertActionStyleDefault
-                                handler:^(UIAlertAction * action) {
-                                    //Handle your yes please button action here
-        [NSUserDefaults.standardUserDefaults setBool:true forKey:@"GameOver"];
-        [self goToViewController];
-                                }];
-
-//   // UIAlertAction* noButton = [UIAlertAction
-//                               actionWithTitle:@"No"
-//                               style:UIAlertActionStyleCancel
-//                               handler:^(UIAlertAction * action) {
-//                                   //Handle no, thanks button
-//                               }];
-
-    //Add your buttons to alert controller
-
-    [alert addAction:yesButton];
-   // [alert addAction:noButton];
-
-    [self presentViewController:alert animated:YES completion:nil];
 }
 
 - (IBAction)RestartGame:(id)sender {
@@ -190,12 +126,6 @@ static int i = 0;
     }
         
     }
-}
--(void) goToViewController {
-    NSString * storyboardName = @"Main";
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
-    UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"UnlockedController"];
-    [self presentViewController:vc animated:YES completion:nil];
 }
 -(void) gameOverUI
 {   self.ResetButton.hidden = NO;
